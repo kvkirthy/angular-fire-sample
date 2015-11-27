@@ -1,0 +1,25 @@
+
+<div class="text-center" ng-show="author == undefined" >
+	<button ng-click="loginWithFacebook()" style="width:350px" ng-model-options="{ updateOn: 'click' }">Login with Facebook</button> <br/> Or <br/>
+	<input type="text" ng-model="author" placeholder="Enter user name" style="width:350px" ng-model-options="{ updateOn: 'blur' }" /><br/>
+</div>
+<div ng-show="author != undefined">	
+	<div class="text-center">
+		<h3>{{author}}</h3>
+		<textarea ng-model="newMessage" style="width:350px"></textarea> <br/>
+		<button style="width:350px" ng-click="postMessage()">Go</button>		
+	</div>
+	<hr/>
+	
+	<table class="table table-striped">
+		<tr ng-repeat="message in messageList">
+			<td>
+				<strong>{{message.author}}</strong> says,
+				<div>{{message.message}}</div>
+			</td> 
+			<td>
+				<button ng-click="deleteMessage(message)">Delete</button>
+			</td>
+		</tr>		
+	</table>	
+</div>

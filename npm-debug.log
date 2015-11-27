@@ -1,0 +1,59 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'bootstrap',
+1 verbose cli   '--save' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.5
+4 verbose install initial load of C:\Me\Playground\Parse-Sample\parse-js-blank\package.json
+5 warn package.json message-board@1.0.0 No description
+6 warn package.json message-board@1.0.0 No repository field.
+7 warn package.json message-board@1.0.0 No README data
+8 verbose readDependencies loading dependencies from C:\Me\Playground\Parse-Sample\parse-js-blank\package.json
+9 silly cache add args [ 'bootstrap', null ]
+10 verbose cache add spec bootstrap
+11 silly cache add parsed spec { raw: 'bootstrap',
+11 silly cache add   scope: null,
+11 silly cache add   name: 'bootstrap',
+11 silly cache add   rawSpec: '',
+11 silly cache add   spec: '*',
+11 silly cache add   type: 'range' }
+12 silly addNamed bootstrap@*
+13 verbose addNamed "*" is a valid semver range for bootstrap
+14 silly addNameRange { name: 'bootstrap', range: '*', hasData: false }
+15 silly mapToRegistry name bootstrap
+16 silly mapToRegistry using default registry
+17 silly mapToRegistry registry http://artifactory.cdk.com/artifactory/api/npm/npm-repo
+18 silly mapToRegistry uri http://artifactory.cdk.com/artifactory/api/npm/npm-repo/bootstrap
+19 verbose addNameRange registry:http://artifactory.cdk.com/artifactory/api/npm/npm-repo/bootstrap not in flight; fetching
+20 verbose request uri http://artifactory.cdk.com/artifactory/api/npm/npm-repo/bootstrap
+21 verbose request no auth needed
+22 info attempt registry request try #1 at 12:54:52 AM
+23 verbose request id 4a6b0f78bf7abf61
+24 http request GET http://artifactory.cdk.com/artifactory/api/npm/npm-repo/bootstrap
+25 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND artifactory.cdk.com
+26 info attempt registry request try #2 at 12:55:02 AM
+27 http request GET http://artifactory.cdk.com/artifactory/api/npm/npm-repo/bootstrap
+28 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND artifactory.cdk.com
+29 info attempt registry request try #3 at 12:56:02 AM
+30 http request GET http://artifactory.cdk.com/artifactory/api/npm/npm-repo/bootstrap
+31 verbose stack Error: getaddrinfo ENOTFOUND artifactory.cdk.com
+31 verbose stack     at errnoException (dns.js:44:10)
+31 verbose stack     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:94:26)
+32 verbose cwd C:\Me\Playground\Parse-Sample\parse-js-blank
+33 error Windows_NT 6.3.9600
+34 error argv "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "bootstrap" "--save"
+35 error node v0.12.5
+36 error npm  v2.11.2
+37 error code ENOTFOUND
+38 error errno ENOTFOUND
+39 error syscall getaddrinfo
+40 error network getaddrinfo ENOTFOUND artifactory.cdk.com
+40 error network This is most likely not a problem with npm itself
+40 error network and is related to network connectivity.
+40 error network In most cases you are behind a proxy or have bad network settings.
+40 error network
+40 error network If you are behind a proxy, please make sure that the
+40 error network 'proxy' config is set properly.  See: 'npm help config'
+41 verbose exit [ 1, true ]

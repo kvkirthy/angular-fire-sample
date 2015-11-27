@@ -1,0 +1,21 @@
+{
+  "name": "message-board",
+  "version": "0.0.0",
+  "authors": [
+    "V Keerti Kotaru <kvkirthy@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angularjs": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "angularfire": "~1.1.3"
+  }
+}

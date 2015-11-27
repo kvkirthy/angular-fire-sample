@@ -1,0 +1,9 @@
+{
+  "firebase": "venckimessageboard",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

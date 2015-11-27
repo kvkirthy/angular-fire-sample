@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Message Board</title>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+ 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/angularjs/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angularfire/dist/angularfire.min.js"></script>
+  <script type="text/javascript" src="bower_components/firebase/firebase.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body ng-app="messageBoard">
+
+  <!-- Bootstrap Nav bar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <span class="navbar-brand" href="#">Message Board</span>
+      </div>
+      <div class="collapse navbar-collapse" ng-controller="connectionStatusController">
+        <div class="nav navbar-nav navbar-right">
+        <br/>
+          <img ng-show="connectionStatus.$value" src="images/green.png" style="max-height:24px" />
+          <img ng-show="!connectionStatus.$value" src="images/red.png" style="max-height:24px" />
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+  <div ui-view class="container"></div>  
+
+</body>
+
+</html>
