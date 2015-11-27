@@ -27,6 +27,10 @@ angular.module("messageBoard", ['ui.router', 'firebase'])
 })
 .controller('homeController', function($scope, messageBoardReference, $firebaseArray, $firebaseObject){
 
+	$scope.$watch('author',function(){
+		messageBoardReference.user = $scope.author;
+	});
+
 	$scope.loginWithFacebook = function(){
 		messageBoardReference.firebase.authWithOAuthPopup("facebook", function(error, authData){
 			if(error){
@@ -57,10 +61,10 @@ angular.module("messageBoard", ['ui.router', 'firebase'])
 
 })
 
-.controller('emailController', function($scope, $firebaseObject){
+.controller('emailController', function($scope, $firebaseObject, messageBoardReference){
 
 	var reference = new Firebase("https://venckimessageboard.firebaseio.com/email");
-	var firebaseObj = $firebaseObject(reference);
+	var firebaseObj = $firebaseObject(reference.child(messageBoardReference.user));
 	firebaseObj.$bindTo($scope, "emailMessage");
 
 })
