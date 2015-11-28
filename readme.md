@@ -9,6 +9,6 @@ AngularFire is AngularJS API for Firebase. This is sample app to demo AngularFir
 
 About Me,
 ###V Keerti Kotaru
-venkata.kotaru@cdk.com
-Tweets [@kvkirthy](http://twitter.com/kvkirthy)
+venkata.kotaru@cdk.com  
+Tweets [@kvkirthy](http://twitter.com/kvkirthy)  
 Blogs at [bit.ly/kotaru](http://bit.ly/kotaru)
