@@ -2,10 +2,10 @@
 angular.module("messageBoard", ['ui.router', 'firebase'])
 .constant("messageBoardReference", {})
 .config(function($stateProvider, $urlRouterProvider, messageBoardReference){
-
+	
 	messageBoardReference.firebase = new Firebase("https://venckimessageboard.firebaseio.com/");
 	messageBoardReference.connStatusRef = new Firebase("https://venckimessageboard.firebaseio.com/.info/connected");
-
+//Firebase.goOffline();
 
 	$stateProvider
 		.state('home',{
@@ -23,7 +23,7 @@ angular.module("messageBoard", ['ui.router', 'firebase'])
 
 })
 .controller("connectionStatusController", function($scope, $firebaseObject, messageBoardReference){
-	$scope.connectionStatus = $firebaseObject(messageBoardReference.connStatusRef);
+	$scope.connectionStatus = $firebaseObject(new Firebase("https://venckimessageboard.firebaseio.com/.info/connected"));
 })
 .controller('homeController', function($scope, messageBoardReference, $firebaseArray, $firebaseObject){
 
@@ -63,8 +63,9 @@ angular.module("messageBoard", ['ui.router', 'firebase'])
 
 .controller('emailController', function($scope, $firebaseObject, messageBoardReference){
 
-	var reference = new Firebase("https://venckimessageboard.firebaseio.com/email");
-	var firebaseObj = $firebaseObject(reference.child(messageBoardReference.user));
+	var firebaseObj = $firebaseObject(new Firebase("https://venckimessageboard.firebaseio.com/email").child(messageBoardReference.user));
+	messageBoardReference.firebase.child(messageBoardReference.user).child("connectionStatus").onDisconnect().set("disconnected");
+
 	firebaseObj.$bindTo($scope, "emailMessage");
 
 })

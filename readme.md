@@ -1,6 +1,6 @@
-# GDG DevFest 2015
+# Firebase Samples
 
-AngularFire is AngularJS API for Firebase. This is sample app to demo AngularFire at DevFest 2015, Google Developers Group Hyderabad.
+AngularFire is AngularJS API for Firebase. This repo has a sample app to demonstrate features during my demo.
 
 [Presentation / Deck](https://docs.google.com/presentation/d/1FL8q7611hgItucMVmPqqYNz3h99AhO9WrMouf44UM30/edit#slide=id.gc6f8badac_0_39)
 
